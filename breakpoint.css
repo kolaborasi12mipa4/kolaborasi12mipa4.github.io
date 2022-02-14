@@ -1,0 +1,319 @@
+/* HAMBURGER */
+.hamburger {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 25px;
+    height: 4px;
+    background-color: rgb(131, 131, 131);
+    position: absolute;
+    border-radius: 5px;
+    transition: all .3s;
+    top: 0;
+}
+.hamburger div:nth-child(2) {
+    top: 10px;
+}
+.hamburger div:nth-child(3) {
+    top: 20px;
+}
+.hamburger.button-active div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+.hamburger.button-active div:nth-child(2) {
+    transform: translateX(-20px);
+    opacity: 0;
+}
+.hamburger.button-active div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+/* MEDIA */
+@media screen and (min-width: 1500px) {
+    .home-page .main {
+        width: 95%;
+    }
+    .home-page .main-text h1 {
+        font-size: 5em;
+        line-height: 80px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .member-identity .biodata .bio h3 {
+        font-size: .8em;
+    }
+}
+
+
+
+@media screen and (min-width:400px) and (max-width: 600px) {
+    .to-top {
+        bottom: 2em;
+        right: 2em;
+    }
+    svg {
+        display: block;
+    }
+    .home-page nav {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 0 0 0;
+        height: 11vh;
+        align-items:flex-start;
+        transition: all .4s;
+        position: fixed;
+        z-index: 9999;
+        background-color: #f3f3f3;
+    }
+    nav.nav-active {
+        height: 32vh;
+    }
+    .home-page {
+        font-size: 15px;
+    }
+    .list {
+        position: absolute;
+        top: 6em;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 8em;
+        z-index: 9999;
+        transform: translateY(-40px);
+        opacity: 0;
+        transition: all .4s;
+    }
+    .list.list-active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .hamburger {
+        display: inherit;
+        top: 30px;
+        right: 20px;
+    }
+    .main .main-img {
+        display: none;
+    }
+    .main .main-text{
+        width: 100%;
+        height: 100%;
+    }
+    .main-text p {
+        width: 90%;
+    } 
+    .main-text h1 {
+        line-height: 65px;
+    }
+    .main {
+        padding: 10em 3em;
+    }
+    .home-page .main::before {
+        display: none;
+    }
+
+    /* NAMA KELOMPOK */
+.title {
+    margin: 3em 0;
+    width: 100%;
+}
+.subject-title {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em 0;
+    border-radius: 8px;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.subject-title h2 {
+    color: white;
+}
+.h3h3 {
+    width: 85%;
+    margin: 0 auto;
+}
+
+    /* LESSON SECTION */
+    .member {
+        font-size: 11px;
+        width: 90%;
+    }
+    
+    .member-identity {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+
+    /* TITLE SECTION */
+.title-lesson {
+    width: max-content;
+    margin: 6em 0 3em 0;
+    width: 100%;
+}
+.subject-title-lesson {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em 0;
+    border-radius: 8px;
+    width: 60%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.subject-title-lesson h2 {
+    color: white;
+}
+
+    /* LESSON SECTION */
+    .lesson {
+        width: 100%;
+        padding: 1em;
+    }
+    .subject {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(5,1fr);
+        gap: 1em;
+    }
+    .subject div {
+        padding: .7em;
+    }
+}
+
+
+@media screen and (max-width: 399px) {
+    .to-top {
+        bottom: 1.5em;
+        right: 1.5em;
+    }
+    .h3h3 {
+        width: 91%;
+        margin: 0 auto;
+    }
+    
+    svg {
+        display: block;
+    }
+    .home-page nav {
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 0 0 0;
+        height: 11vh;
+        align-items:flex-start;
+        transition: all .4s;
+        position: fixed;
+        z-index: 9999;
+        background-color: #f3f3f3;
+    }
+    nav.nav-active {
+        height: 38vh;
+    }
+    .home-page {
+        font-size: 15px;
+    }
+    .list {
+        position: absolute;
+        top: 6em;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 8em;
+        z-index: 9999;
+        transform: translateY(-40px);
+        opacity: 0;
+        transition: all .4s;
+    }
+    .list.list-active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .hamburger {
+        display: inherit;
+        top: 30px;
+        right: 20px;
+    }
+    .main .main-img {
+        display: none;
+    }
+    .main .main-text{
+        width: 100%;
+        height: 100%;
+        font-size: 13px;
+    }
+    .main-text p {
+        width: 90%;
+    } 
+    .main-text h1 {
+        line-height: 55px;
+    }
+    .main {
+        padding: 10em 3em;
+    }
+    .home-page .main::before {
+        display: none;
+    }
+
+    /* NAMA KELOMPOK */
+
+    .member {
+        font-size: 9px;
+        width: 90%;
+    }
+    
+    .member-identity {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+.title {
+    margin: 3em 0;
+    width: 100%;
+}
+.subject-title {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em 0;
+    border-radius: 8px;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.subject-title h2 {
+    color: white;
+}
+
+
+    /* LESSON SECTION */
+    .lesson {
+        width: 100%;
+        padding: 1em;
+    }
+    .subject {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(5,1fr);
+        gap: .5em;
+        font-size: 9px;
+    }
+    .subject div {
+        padding: .8em;
+    }
+    /* TITLE SECTION */
+.title-lesson {
+    width: 100%;
+    margin: 6em 0 3em 0;
+}
+.subject-title-lesson {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em 0;
+    border-radius: 8px;
+    width: 70vmin;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.subject-title-lesson h2 {
+    color: white;
+}
+
+}

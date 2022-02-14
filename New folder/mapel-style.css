@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* NAVBAR SECTION */
+.navbar {
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    background-color: rgba(255,255,255);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.5em 10em 1.2em;
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 1em;
+}
+.navbar a {
+    font-size: 1em;
+    transition: all .2s;
+}
+.navbar a:hover {
+    color: #94be31;
+}
+
+/* LESSON SECTION */
+.lesson {
+    width: 75%;
+    margin: 5em auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10em;
+}
+.lesson .main {
+    width: 65%;
+    margin: 3em 0;
+}
+.lesson h1 {
+    margin: 0 0 1em 0;
+}
+.lesson h2 {
+    margin: .2em 0 1em 0;
+}
+.lesson p {
+    font-size: .9rem;
+}
+
+
+
+/* SUB MENU SECTION */
+.sub-menu {
+    margin: 3em 0;
+    height: max-content;
+    width: a;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* LIST SECTION */
+
+.list-lesson a {
+    display: block;
+    margin: .5em;
+    position: relative;
+    margin: 1em;
+}
+.list-lesson li {
+    list-style: none;
+    width: max-content;
+}
+.list-lesson a::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(29, 198, 153);
+    transform: scale(0,1);
+    transition: .4s ease;
+}
+.list-lesson a:hover::before {
+    transform: scale(1,1);
+}
+
+
+#button li {
+    margin: 0;
+    height: 24px;
+    align-self: center;
+}
+/* DARK MODE */
+.sun,.moon {
+    cursor: pointer;
+}
+.sun {
+    opacity: 0;
+    transform: translateX(0);
+    transition: all .3s;
+}
+.moon {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .3s;
+}
+.lesson.moon-active * {
+    background-color: rgb(36, 35, 35);
+    color: rgb(240, 240, 240);
+}
+
+.lesson.sun-active * {
+    color: rgb(36, 35, 35);
+    background-color: #fff;
+}
+.moon.slide-moon {
+    transform: translateX(-20px);
+    opacity: 0;
+    pointer-events: none;
+}
+.sun.slide-sun {
+    transform: translate(-40px);
+    opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .moon svg {
+        fill: #b9babb;
+    }
+    .navbar ul a {
+        color: #94be31  ;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .moon svg {
+        fill: #2D4263;
+    }
+    .navbar ul a {
+        color: rgb(36, 35, 35)
+    }
+}

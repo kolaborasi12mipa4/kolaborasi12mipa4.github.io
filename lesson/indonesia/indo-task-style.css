@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* NAVBAR SECTION */
+.navbar {
+    padding: 1.5em;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(255,255,255);
+}
+.navbar ul {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+}
+.navbar a {
+    font-size: 1em;
+    transition: all .2s;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #94be31;
+}
+
+/* LESSON SECTION */
+.lesson {
+    width: 75%;
+    margin: 5em auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10em;
+}
+.lesson .main {
+    width: 65%;
+    margin: 1em 0;
+}
+.lesson h1 {
+    margin: 0 0 1em 0;
+}
+.lesson h2 {
+    margin: .2em 0 1em 0;
+}
+.lesson p {
+    font-size: .9rem;
+}
+
+/* SUB MENU SECTION */
+.sub-menu {
+    margin: 3em 0;
+    height: max-content;
+    width: a;
+    border: 1px solid rgba(0,0,0,.1);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+/* LIST SECTION */
+
+.list-lesson a {
+    display: block;
+    margin: .5em;
+    position: relative;
+    margin: 1em;
+}
+.list-lesson li {
+    list-style: none;
+    width: max-content;
+}
+.list-lesson a::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(29, 198, 153);
+    /* transform-origin: top left; */
+    transform: scale(0,1);
+    transition: .4s ease;
+}
+.list-lesson a:hover::before {
+    /* width: 100%; */
+    transform: scale(1,1);
+}
+

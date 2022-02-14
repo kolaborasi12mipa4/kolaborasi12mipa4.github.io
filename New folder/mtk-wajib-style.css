@@ -1,0 +1,11 @@
+table,tr,th,td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Roboto';
+}
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 3em auto;
+}

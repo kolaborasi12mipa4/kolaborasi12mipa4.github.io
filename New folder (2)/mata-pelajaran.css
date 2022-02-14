@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR SECTION */
+.navbar {
+    padding: 1.5em;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    background-color: rgba(255,255,255);
+}
+.navbar ul {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+}
+.navbar a {
+    font-size: 1em;
+    transition: all .2s;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #94be31;
+}
+
+/* TITLE SECTION */
+.title-lesson {
+    width: max-content;
+    margin: 6em 0 3em 0;
+    width: 48%;
+}
+.subject-title-lesson {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em 0;
+    border-radius: 8px;
+    width: inherit;
+    justify-content: space-evenly;
+}
+.subject-title h2 {
+    color: white;
+}
+
+/* LESSON SECTION */
+.lesson {
+    width: 77.5%;
+    margin: 0 auto;
+}
+.subject {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: .5em;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s all;
+}
+.item-animation {
+    opacity: 1;
+    transform: translateY(0px);
+}
+.subject div {
+    justify-self: center;
+}
+.subject div a {
+    height: max-content;
+    display: inline-block;
+    overflow: hidden;
+}
+.subject .image {
+    width: 398px;
+    /* width: max-content; */
+    height: 325px;  
+    transform: scale(1);
+    transition: .3s ease-in-out;
+
+}
+
+/* HOVER EFFECT */
+.subject div a:hover img {
+    transform: scale(1.15);
+}

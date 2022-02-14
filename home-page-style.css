@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+}
+
+/* HOME PAGE */
+.home-page {
+    background-color: #f5f5f4;
+}
+.home-page svg {
+    display: block;
+}
+/* navbar section */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    padding: 0 9em 0 6em;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+    list-style: none;
+}
+nav ul a, button span,h2,h3{
+    font-family: 'Poppins', sans-serif;
+}
+nav ul a {
+    color: black;
+    padding: .5em 1em;
+    transition: .3s;
+    border-radius: 10px;
+    cursor: pointer;
+}
+nav .list a:hover {
+    color: #94be31;
+}
+nav img {
+    width: 130px;
+    height: 90px;
+}
+
+
+/* main section */
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 4em 5em;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.main::before {
+    content: "";
+    height: 5px;
+    border-radius: 10px;
+    background-color: #658e29;
+    position: absolute;
+    bottom: 5%;
+    animation: strech 5s alternate infinite ease-in-out;
+}
+.main-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3em;
+}
+.main-text h1 {
+    font-size: 4em;
+    line-height: 70px;
+}
+.main-text p {
+    font-size: 1em;
+    width: 65%;
+}
+
+.main-text button {
+    width: max-content;
+    background-color: #649C11;
+    border: none;
+    border-radius: 50px;
+    width: 135px;
+    height: 40px;
+    transition: all .5s;
+    padding: 0 13px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+button svg {
+    fill: white;
+}
+button svg, button span {
+    position: relative;
+    z-index: 99;
+}
+button .button-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-section::before {
+    content: "";
+    background-color:#B8405E ;
+    position: absolute;
+    left: .6%;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 50px;
+    transition: .5s;
+    z-index: 0;
+}
+button:hover .button-section::before {
+    width: 100%;
+}
+.main-text button a {
+    color: white;
+}
+button:hover {
+    width: 145px;
+}
+.main-img {
+    display: flex;
+    justify-content:flex-end;
+    animation: introLoad 2s forwards;
+    animation-delay: .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.main-img img {
+    width: 80%;
+    border-radius: 20px;
+}
+
+@keyframes introLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+@keyframes strech {
+    from {
+        width: 150px;
+    }
+
+    to {
+        width: 350px;
+    }
+}
+.txt {
+    transform: translateY(100%);
+    display: inline-block;
+}
+/* .txt-p {
+    transform: translateY(-150%);
+} */
+
+.hide {
+    background-color: #f5f5f4;
+    overflow: hidden;
+    height: max-content;
+}
+
+
+/* NAMA KELOMPOK */
+.title {
+    margin: 3em 0;
+    width: 350px;
+}
+.subject-title {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em;
+    border-radius: 8px;
+    width: inherit;
+    justify-content: space-evenly;
+}
+.subject-title h2 {
+    color: white;
+    align-self: center;
+}
+
+/* MEMBER SECTION */
+.member {
+    width: 77.5%;
+    margin: 10em auto;
+}
+
+.member-identity {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    height: auto;
+    row-gap: 2em;
+}
+.biodata {
+    border: 1px solid rgba(0,0,0,.2);
+    width: 90%;
+    height: max-content;
+    border-radius: 10px;
+    justify-self: center;
+}
+.biodata .bio {
+    margin: 2em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.bio img {
+    border-radius: 50%;
+    width: 55%;
+}
+.biodata .bio h3 {
+    text-align: left;
+    font-size: .9em;
+}
+.name-absen-class {
+    width: 100%;
+    margin-top: 1em;
+}
+.h3h3 {
+    width: 82%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+/* LESSON SECTION */
+.lesson {
+    width: 77.5%;
+    margin: 10em auto;
+    height: auto;
+}
+.subject {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,250px);
+    gap: 2em;
+}
+.subject div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subject div a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+.subject div a p {
+    margin-top: 1em;
+    font-family: 'Asap', sans-serif;
+    text-align: center;
+}
+.subject div a p:hover {
+    text-decoration: underline;
+}
+.subject img {
+    width: auto;
+    height: auto;
+
+}
+
+/* TITLE SECTION */
+.title-lesson {
+    width: max-content;
+    margin: 6em 0 3em 0;
+    width: 280px;
+}
+.subject-title-lesson {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em 0;
+    border-radius: 8px;
+    width: inherit;
+    justify-content: space-evenly;
+}
+.subject-title-lesson h2 {
+    color: white;
+    align-self: center;
+}
+
+.to-top {
+    width: 40px;
+    height: 40px;
+    background-color: #B8405E;
+    position: fixed;
+    bottom: 5em;
+    right: 5em;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s;
+}
+.to-top svg {
+    fill: #fff;
+}
+.to-top:hover {
+    background-color: #DB6B97;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        background-color: #fff;
+    }
+    .home-page {
+        background-color: #f5f5f4;
+    }
+    nav {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        background-color: #fff;
+    }
+    .home-page {
+        background-color: #f5f5f4;
+    }
+}
+
+.icons {
+    color: black;
+    font-family: 'Asap', sans-serif;
+    display: inline-block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.icon {
+    font-family: 'Asap', sans-serif;
+    font-weight: 300;
+}

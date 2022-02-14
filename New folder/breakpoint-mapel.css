@@ -1,0 +1,37 @@
+@media screen and (min-width:400px) and (max-width: 600px) {
+    .navbar {
+        padding: 1.5em 0 1.2em 10em ;
+    }
+    .lesson {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 1.5em;
+        gap: 0;
+    }
+    .lesson .main {
+        width: 100%;
+    }
+    .main img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .navbar {
+        padding: 1.5em 0 1.2em 10em ;
+    }
+    .lesson {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 1.5em;
+        gap: 0;
+    }
+    .lesson .main {
+        width: 100%;
+    }
+    .main img {
+        width: 100%;
+    }
+}

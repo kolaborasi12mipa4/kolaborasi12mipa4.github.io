@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* NAVBAR SECTION */
+.navbar {
+    padding: 1.5em;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.navbar ul {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 auto;
+}
+.navbar a {
+    font-size: 1em;
+    transition: all .2s;
+    text-decoration: none;
+}
+.navbar a:hover {
+    color: #94be31;
+}
+
+/* TITLE SECTION */
+.title {
+    width: max-content;
+    margin: 3em 0;
+    width: 52%;
+}
+.subject-title {
+    display: flex;
+    background-color: #94be31;
+    padding: 1em 0;
+    border-radius: 8px;
+    width: inherit;
+    justify-content: space-evenly;
+}
+.subject-title h2 {
+    color: white;
+}
+
+/* MEMBER SECTION */
+.member {
+    width: 77.5%;
+    margin: 6em auto;
+}
+
+.member-identity {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 4em;
+}
+.biodata {
+    border: 1px solid rgba(0,0,0,.2);
+    width: 345px;
+    height: 429px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+}
+.biodata .bio {
+    width: 90%;
+    margin: 10px auto;
+}
+.bio img {
+    border-radius: 50%;
+}
+.biodata .bio h3 {
+    text-align: left;
+    font-size: 1em;
+}
+.name-absen-class {
+    width: max-content;
+    margin: 1em auto;
+}
