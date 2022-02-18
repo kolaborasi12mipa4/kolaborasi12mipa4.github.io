@@ -1,7 +1,7 @@
 
     var alerted = localStorage.getItem('alerted') || '';
     if (alerted != 'yes') {
-     alert("YANG DEVICE NYA DARK MODE GAUSA TEMENIN!");
+     alert("Kalau hidup matikan dulu dark mode nya!");
      localStorage.setItem('alerted','yes');
     }
 
